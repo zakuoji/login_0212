@@ -20,9 +20,10 @@ namespace login_0212
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ryodozkpr\Documents\dbLogin.mdf;Integrated Security=True;Connect Timeout=30;");
+       
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\ProjectsV13;Initial Catalog=新しいデータベース;Connect Timeout=60;Persist Security Info=True;");
             con.Open();
-
+                //Form1.csと同様。
             try{
                 var cmd = new System.Data.SqlClient.SqlCommand("INSERT INTO tblogin VALUES('" + textBox1.Text + "' , '" + textBox2.Text + "')", con);
                 cmd.ExecuteNonQuery();
