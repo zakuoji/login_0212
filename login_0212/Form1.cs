@@ -27,12 +27,11 @@ namespace login_0212
         private void button1_Click(object sender, EventArgs e)
         {
 
-            //Data Source=(localdb)\ProjectsV13;Initial Catalog=新しいデータベース;Connect Timeout=60;Persist Security Info=True;
-            //基本形↑
-          
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ryodozkpr\Documents\dbLogin.mdf;Integrated Security=True;Connect Timeout=30;");
+            
+                     
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\ProjectsV13;Initial Catalog=新しいデータベース;Connect Timeout=60;Persist Security Info=True;");
             con.Open();
-
+               //SqlConnectionはMyPCの接続文字列を入力
             try
             {
                 string query = "Select count(*) From tblogin where Username = '" + textBox1.Text.Trim() + "' and Password = '" + textBox2.Text.Trim() + "' ";
