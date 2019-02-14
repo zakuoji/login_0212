@@ -15,6 +15,7 @@ namespace login_0212
         public Form2()
         {
             InitializeComponent();
+            MessageBox.Show("編集中", "通知");
         }
     }
 }
